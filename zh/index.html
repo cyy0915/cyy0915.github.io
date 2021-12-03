@@ -3,15 +3,61 @@
     </div>
     <h1 align="center">陈屹扬的项目展示</h1>
     <p align="center">
-        Master of Computer graphics and game technology, University of Pennsylvania <br />
-        Email: yiyangch@seas.upenn.edu
+        宾夕法尼亚大学， 计算机图形与游戏技术硕士
+        <br />
+        邮箱: yiyangch@seas.upenn.edu
     </p>
-    <h3>Mini Minecraft（项目仍在进行）</h3>
+    <h2>Mini Minecraft（项目仍在进行）</h2>
     <p>使用Qt作为框架，使用OpenGL制作了一个简单的“我的世界（Minecraft)”游戏。玩家可以用飞行模式或地面模式自由移动，破坏方块或创造方块。地图随机生成，没有边界。此项目为2021秋季学期课程Interactive Computer Graphics（交互式计算机图形学）的最终项目，仍在添加功能与优化中，以下为里程碑1和里程碑2的视频展示。</p>
     <p>里程碑1：</p>
     <iframe src="https://drive.google.com/file/d/1ZLbzEjiEBygYRpvQNV8m1d7Zbi1AEq8l/preview" width="640" height="480" allow="autoplay"></iframe>
     <p>里程碑2：</p>
     <iframe src="https://drive.google.com/file/d/1RskhftRseJvnN4S1n4YFn2-keVvS0hMT/preview" width="640" height="480" allow="autoplay"></iframe>
     <p><br /></p>
-    <h3>简单的模型与骨骼编辑器</h3>
-    <p>使用Qt作为框架，制作了一个简易编辑器，用于加载并编辑网格模型与骨架，还实现了</p>
+    <h2>模型与骨骼编辑器</h2>
+    <p>使用Qt作为框架，制作了一个简易编辑器，用于加载并编辑网格模型与骨架，还实现了鼠标点击选择物体，加中点，三角化，模型细分，蒙皮等操作</p>
+    <video height="300" controls>
+        <source src="half-edge_mesh_editor_demo1.mp4" type="video/mp4">
+    </video>
+    <video height="300" controls>
+        <source src="half-edge_mesh_editor_demo2.mp4" type="video/mp4">
+    </video>
+    
+    <p><br/></p>
+    
+    <h2>有趣的渲染效果</h2>
+    <p>使用OpenGL实现了一些有趣的渲染效果。</p>
+    <div style="float: left; margin-right: 3%;">
+        <p>顶点变换:</p>
+        <img src="vertex_deformation.gif" height="480">
+    </div>
+    <div style="float: left;">
+        <p>后处理:</p>
+        <img src="post_processing.gif" height="480">
+    </div>
+    <div style="clear: both;"></div>
+    <p><br/></p>
+    
+    <h2>顺向运动学（FK）与反向运动学（IK）</h2>
+    <p>实现了FK和一些IK方法，比如几何方法，CCD算法和矩阵伪逆算法。在人物的走路循环中应用了IK</p>
+    <div style="float: left; margin-right: 3%;">
+        <video height="480" controls>
+            <source src="fk_and_ik.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div style="float: left;">
+        <img src="fook_ik.gif" height="300">
+    </div>
+    <div style="clear: both;"></div>
+    <p><br/></p>
+    <h2>简单的汽车游戏</h2>
+    <p>使用OpenGL和GLFW制作了一个十分简单的汽车游戏，实现了阴影和天空盒</p>
+    <video height="480" controls>
+        <source src="car_game.mp4" type="video/mp4">
+    </video>
+    <p><br/></p>
+    <h2>固定的注视点渲染</h2>
+    <p>在Unity中通过丢弃并重建像素，实现了一种简单的固定注视点渲染的方法</p>
+    <video height="480" controls>
+        <source src="simple_forveated_rendering_demo.mp4" type="video/mp4">
+    </video>
