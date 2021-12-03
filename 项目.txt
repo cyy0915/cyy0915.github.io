@@ -1,0 +1,27 @@
+main:
+mini minecraft
+
+half-edge mesh editor
+
+opengl fun
+
+fk and ik
+
+car game
+
+simple forveated rendering
+
+unreal game
+
+other
+point cloud?
+
+curve and rotation
+
+3d modeling environment and objects
+
+
+
+
+
+rasterizer, scene graph
