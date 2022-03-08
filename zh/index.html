@@ -8,10 +8,42 @@
         <br />
         邮箱: yiyangch@seas.upenn.edu
     </p>
-    <h2>Mini Minecraft（项目仍在进行）</h2>
+
+    <h2>基于物理的渲染器</h2>
+    <p>
+        使用C++和Qt制作了一个基于物理的渲染器。实现了Path Tracing算法，并且使用multiple importance sampling (MIS)来估计路径上每个顶点的贡献。
+    </p>
+    <p>
+        此程序首先加载一个json格式的场景文件，然后指定采样次数、深度限制和积分器进行渲染。在积分器的选项中，"Surface Normals"只是用来计算法线方向，"Full Lighting"是使用了Path tracing算法的积分器，"Direct Lighting"积分器只使用MIS计算直接光照，可以认为是深度限制固定为1的"Full Lighting"。
+    </p>
+    <p>
+        此程序还在编写完善中，需要更多类型的BSDF材质，和一个用于加速计算交点的KD树。
+    </p>
+    <p>
+        以下是一个展示视频，剪掉了部分渲染过程。
+    </p>
+    <video height="300" controls>
+        <source src="../PBR.mp4" type="video/mp4">
+    </video>
+    <p><br/></p>
+
+    <h2>Mini Minecraft</h2>
     <p>使用Qt作为框架，使用OpenGL制作了一个简单的“我的世界（Minecraft)”游戏。玩家可以用飞行模式或地面模式自由移动，破坏方块或创造方块。地图随机生成，没有边界。下面的视频展示了我们所实现的所有功能。</p>
     <iframe src="https://drive.google.com/file/d/1ka8l8ARFGWb50GoiU8JiabMgdnZb5vuF/preview" width="640" height="480" allow="autoplay"></iframe>
     <p><br /></p>
+
+    <h2>Maya和Houdini的LSystem插件</h2>
+    <p>
+        制作了一个简单的Maya的LSystem插件和一个Houdini的LSystem插件。输入语法，迭代次数，角度和步长，就可以生成模型。
+    </p>
+    <video height="300" controls>
+        <source src="../maya.mp4" type="video/mp4">
+    </video>
+    <video height="300" controls>
+        <source src="../houdini.mp4" type="video/mp4">
+    </video>
+    <p><br/></p>
+
     <h2>模型与骨骼编辑器</h2>
     <p>使用Qt作为框架，制作了一个简易编辑器，用于加载并编辑网格模型与骨架，还实现了鼠标点击选择物体，加中点，三角化，模型细分，蒙皮等操作。</p>
     <video height="300" controls>
@@ -20,9 +52,8 @@
     <video height="300" controls>
         <source src="../half-edge_mesh_editor_demo2.mp4" type="video/mp4">
     </video>
-    
     <p><br/></p>
-    
+
     <h2>有趣的渲染效果</h2>
     <p>使用OpenGL实现了一些有趣的渲染效果。</p>
     <div style="float: left; margin-right: 3%;">
@@ -48,12 +79,7 @@
     </div>
     <div style="clear: both;"></div>
     <p><br/></p>
-    <h2>简单的汽车游戏</h2>
-    <p>使用OpenGL和GLFW制作了一个十分简单的汽车游戏，实现了阴影和天空盒。</p>
-    <video height="480" controls>
-        <source src="../car_game.mp4" type="video/mp4">
-    </video>
-    <p><br/></p>
+
     <h2>固定的注视点渲染</h2>
     <p>在Unity中通过丢弃并重建像素，实现了一种简单的固定注视点渲染的方法。</p>
     <video height="480" controls>

@@ -7,16 +7,47 @@
     Master of Computer graphics and game technology, University of Pennsylvania <br />
     Email: yiyangch@seas.upenn.edu
 </p>
+<h2>Physically Based Rendering Program</h2>
+<p>
+    Made a Physically based rendering program using C++ and Qt. I implemented the path tracing algorithm, and I used multiple importance sampling (MIS) to estimate contribution of each vertex on the path.
+</p>
+<p>
+    The program first loads a scene file in JSON format and then renders with user-defined sample times, recursion limit and integrator type. In the integrate type option, "Surface Normals" just render the surface normal of the scene; "Full Lighting" is the path tracing integrator; and "Direct Lighting" just compute the direct light with MIS, which can be regarded as "Full Lighting" with recursion limit 1.
+</p>
+<p>
+    The program isn't completed yet. More BSDF need to be created, and a KD tree is needed to accelerate the compute of intersection. 
+</p>
+<p>
+    See the following video. Some part of render process is clipped.
+</p>
+<video height="300" controls>
+    <source src="PBR.mp4" type="video/mp4">
+</video>
+<p><br/></p>
+
 <h2>Mini Minecraft</h2>
 <p>
-    Made a Mini Minecraft game using Qt and OpenGL. Player can move around in fly mode and ground mode. And blocks can be created and destroyed by player. The terrain is procedual generated, and thus has no boundary. The following videos demonstrate all the features we implemented in the game.
+    Made a Mini Minecraft game using Qt and OpenGL. Player can move around in fly mode and ground mode, and create or destroy nearby blocks. The terrain is procedual generated, and thus has no boundary. The following videos demonstrate all the features we implemented in the game.
 </p>
 <iframe src="https://drive.google.com/file/d/1ka8l8ARFGWb50GoiU8JiabMgdnZb5vuF/preview" width="640" height="480" allow="autoplay"></iframe>
 
 <p><br /></p>
-<h2>Half-edge Mesh and Skeleton Editor</h2>
+
+<h2>LSystem Plugin for Maya and Houdini</h2>
 <p>
-    Made a mesh and skeleton editor using Qt and OpenGL with half-edge mesh structure. It can load obj model file and json skeleton file to edit them. Implemented operation include ray casting selection, add midpoint, triangulate, subdivision, two methods of skinning, and two methods of blending.
+    Made a simple Maya LSystem plugin and a Houdini LSystem plugin. Input grammar, iterations, angle and step size, you can get the generated model.
+</p>
+<video height="300" controls>
+    <source src="maya.mp4" type="video/mp4">
+</video>
+<video height="300" controls>
+    <source src="houdini.mp4" type="video/mp4">
+</video>
+<p><br/></p>
+
+<h2>Mesh and Skeleton Editor</h2>
+<p>
+    Made a mesh and skeleton editor using Qt and OpenGL with half-edge mesh structure. It can load model file in "obj" format and skeleton file in "json" format and then edit them. Implemented operations include ray casting selection, add midpoint, triangulate, subdivision, two methods of skinning, and two methods of blending.
 </p>
 <video height="300" controls>
     <source src="half-edge_mesh_editor_demo1.mp4" type="video/mp4">
@@ -52,11 +83,7 @@
 </div>
 <div style="clear: both;"></div>
 <p><br/></p>
-<h2>Simple Car Game</h2>
-<p>Made a very simple car game using OpenGL and GLFW. Implemented shadow and sky box</p>
-<video height="480" controls>
-    <source src="car_game.mp4" type="video/mp4">
-</video>
+
 <p><br/></p>
 <h2>Fixed foveated Rendering</h2>
 <p>Implemented a fixed foveated rendering with pixel discard and recover in Unity</p>
