@@ -8,33 +8,42 @@
     Email: yiyangch@seas.upenn.edu
 </p>
 
-<h2>Geometry Optimization Authoring Tool (Still Working)</h2>
+<h2>Geometry Optimization Authoring Tool</h2>
 <p>
     Based on papers "Shape-Up: Shaping Discrete Geometry with Projections" and "Anderson Acceleration for Geometry Optimization and Physics Simulation", made an authoring tool with C++. We implemented some operations for input model, including planarization, wire mesh design and ARAP deforamtion.
 </p>
 <p>
-    We plan to make a standalone application as well as a maya plugin. Currently we have completed the stantalone application and the planarization operation. 
+    We make a standalone application as well as a maya plugin. 
 </p>
-<video height="600" controls>
-    <source src="authoring_tool.mp4" type="video/mp4">
-</video>
+<p>
+    <a href="https://drive.google.com/file/d/1pLaFTvVHWPGburol8jJRtyzvEKDmvrgg/view?usp=sharing"> Standalone application video</a>   
+</p>
+<p>
+    <a href="https://drive.google.com/file/d/19elzxffSRF5A9Qw9Ha57ZZX0cIkeezQo/view?usp=sharing"> Presentation video</a>    
+</p>
+<p> 
+    <a href="https://docs.google.com/presentation/d/1yPMS9ocDrQ96YBwME75GZV7nYWBDC5c2/edit?usp=sharing&ouid=110710600029969113633&rtpof=true&sd=true"> Slides</a>
+</p>
 <p><br/></p>
 
 <h2>Physically Based Rendering Program</h2>
 <p>
-    Made a Physically based rendering program using C++ and Qt. I implemented the path tracing algorithm, and I used multiple importance sampling (MIS) to estimate contribution of each vertex on the path.
+    Made a physically based rendering CPU program using C++ and Qt. I implemented the path tracing algorithm, and I used multiple importance sampling (MIS) to estimate contribution of each vertex on the path.
 </p>
 <p>
     The program first loads a scene file in JSON format and then renders with user-defined sample times, recursion limit and integrator type. In the integrate type option, "Surface Normals" just render the surface normal of the scene; "Full Lighting" is the path tracing integrator; and "Direct Lighting" just compute the direct light with MIS, which can be regarded as "Full Lighting" with recursion limit 1.
 </p>
 <p>
-    The program isn't completed yet. More BSDF need to be created, and a KD tree is needed to accelerate the compute of intersection. 
+    Also made a GPU program with the same algorithm. 
 </p>
 <p>
-    See the following video. Some part of render process is clipped.
+    See the following video. The first is CPU rendering program and the second is GPU. Some part of the render process in the CPU program is clipped.
 </p>
 <video height="600" controls>
     <source src="PBR.mp4" type="video/mp4">
+</video>
+<video height="600" controls>
+    <source src="GPUPBR.mp4" type="video/mp4">
 </video>
 <p><br/></p>
 
