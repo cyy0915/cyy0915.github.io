@@ -1,133 +1,134 @@
 <div style="margin: 5%;">
-<div style="float: right;">
-<a href="/zh"> 中文</a>
-</div>
-<h1 align="center">Yiyang Chen's project demos</h1>
-<p align="center">
-    Master of Computer graphics and game technology, University of Pennsylvania <br />
-    Email: yiyangch@seas.upenn.edu
-</p>
+    <div style="float: right;">
+    <a href="/"> English</a>
+    </div>
+    <h1 align="center">陈屹扬的项目展示</h1>
+    <p align="center">
+        宾夕法尼亚大学， 计算机图形与游戏技术硕士
+        <br />
+        邮箱: yiyangch@seas.upenn.edu
+    </p>
 
-<h2>Geometry Optimization Authoring Tool</h2>
-<p>
-    Based on papers "Shape-Up: Shaping Discrete Geometry with Projections" and "Anderson Acceleration for Geometry Optimization and Physics Simulation", made an authoring tool with C++. We implemented some operations for input model, including planarization, wire mesh design and ARAP deforamtion.
-</p>
-<p>
-    We make a standalone application as well as a maya plugin. 
-</p>
-<p>
-    <a href="https://drive.google.com/file/d/1pLaFTvVHWPGburol8jJRtyzvEKDmvrgg/view?usp=sharing"> Standalone application video</a>   
-</p>
-<p>
-    <a href="https://drive.google.com/file/d/19elzxffSRF5A9Qw9Ha57ZZX0cIkeezQo/view?usp=sharing"> Presentation video</a>    
-</p>
-<p> 
-    <a href="https://docs.google.com/presentation/d/1yPMS9ocDrQ96YBwME75GZV7nYWBDC5c2/edit?usp=sharing&ouid=110710600029969113633&rtpof=true&sd=true"> Slides</a>
-</p>
-<p><br/></p>
-
-<h2>Physically Based Rendering Program</h2>
-<p>
-    Made a physically based rendering CPU program using C++ and Qt. I implemented the path tracing algorithm, and I used multiple importance sampling (MIS) to estimate contribution of each vertex on the path.
-</p>
-<p>
-    The program first loads a scene file in JSON format and then renders with user-defined sample times, recursion limit and integrator type. In the integrate type option, "Surface Normals" just render the surface normal of the scene; "Full Lighting" is the path tracing integrator; and "Direct Lighting" just compute the direct light with MIS, which can be regarded as "Full Lighting" with recursion limit 1.
-</p>
-<p>
-    Also made a GPU program with the same algorithm. 
-</p>
-<p>
-    See the following video. The first is CPU rendering program and the second is GPU. Some part of the render process in the CPU program is clipped.
-</p>
-<video height="600" controls>
-    <source src="PBR.mp4" type="video/mp4">
-</video>
-<video height="600" controls>
-    <source src="GPUPBR.mp4" type="video/mp4">
-</video>
-<p><br/></p>
-
-<h2>Mini Minecraft</h2>
-<p>
-    Made a Mini Minecraft game using Qt and OpenGL. Player can move around in fly mode and ground mode, and create or destroy nearby blocks. The terrain is procedual generated, and thus has no boundary. The following videos demonstrate all the features we implemented in the game.
-</p>
-<iframe src="https://drive.google.com/file/d/1ka8l8ARFGWb50GoiU8JiabMgdnZb5vuF/preview" width="640" height="480" allow="autoplay"></iframe>
-
-<p><br /></p>
-
-
-<h2>LSystem Plugin for Maya and Houdini</h2>
-<p>
-    Made a simple Maya LSystem plugin and a Houdini LSystem plugin. Input grammar, iterations, angle and step size, you can get the generated model.
-</p>
-<video height="400" controls>
-    <source src="maya.mp4" type="video/mp4">
-</video>
-<video height="400" controls>
-    <source src="houdini.mp4" type="video/mp4">
-</video>
-<p><br/></p>
-
-<h2>Mesh and Skeleton Editor</h2>
-<p>
-    Made a mesh and skeleton editor using Qt and OpenGL with half-edge mesh structure. It can load model file in "obj" format and skeleton file in "json" format and then edit them. Implemented operations include ray casting selection, add midpoint, triangulate, subdivision, two methods of skinning, and two methods of blending.
-</p>
-<video height="300" controls>
-    <source src="half-edge_mesh_editor_demo1.mp4" type="video/mp4">
-</video>
-<video height="300" controls>
-    <source src="half-edge_mesh_editor_demo2.mp4" type="video/mp4">
-</video>
-
-<p><br/></p>
-
-
-<h2>Small Unreal Games</h2>
-<p>
-    Made 2 small games with UE4 engine
-</p>
-<iframe src="https://drive.google.com/file/d/170s1MsJf6DU7YrZEPKnJyTd8J5IClmyB/preview" width="640" height="480" allow="autoplay"></iframe>
-<p>
-    This game is a little similar to "Monument Valley", involving optical illusion under specific view. You should change the camera views to find new road and finally reach destination.
-</p>
-<p><br/></p>
-
-<iframe width="1068" height="601" src="https://www.youtube.com/embed/-eCOsB2__f0" title="3dPinball" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>
-    This is a VR game, can be regarded as the 3D version of "Full Tilt! Pinball". You need to use your controllers to hit the ball to prevent it from falling behind, and make the ball hit various types of objects to get score.
-</p>
-<p><br/></p>
-
-<h2>Funny Render effect</h2>
-<p>Implemented some interesting render effect in OpenGL.</p>
-<div style="float: left; margin-right: 3%;">
-    <p>Vertex deformation:</p>
-    <img src="vertex_deformation.gif" height="480">
-</div>
-<div style="float: left;">
-    <p>Post processing:</p>
-    <img src="post_processing.gif" height="480">
-</div>
-<div style="clear: both;"></div>
-<p><br/></p>
-
-<h2>Forward Kinematic and Inverse Kinematic</h2>
-<p>Implemented forward kinematic and some inverse kinematic methods including CCD Algorithm, geometry and pseudo inverse. And used IK in the walk cycle</p>
-<div style="float: left; margin-right: 3%;">
-    <video height="480" controls>
-        <source src="fk_and_ik.mp4" type="video/mp4">
+    <h2>Vulkan草渲染</h2>
+    <p>
+        基于论文Responsive Real-Time Grass Rendering for General 3D Scenes，使用C++和Vulkan API编写程序渲染草。其中草用贝塞尔曲线表示，并实时计算草受力（风力等）的形变
+    </p>
+    <video height="600" controls>
+        <source src="./vulkan_grass.mp4" type="video/mp4">
     </video>
-</div>
-<div style="float: left;">
-    <img src="fook_ik.gif" height="300">
-</div>
-<div style="clear: both;"></div>
-<p><br/></p>
+    <p><br/></p>
 
-<p><br/></p>
-<h2>Fixed foveated Rendering</h2>
-<p>Implemented a fixed foveated rendering with pixel discard and recover in Unity</p>
-<video height="480" controls>
-    <source src="simple_forveated_rendering_demo.mp4" type="video/mp4">
-</video>
+    <h2>用于几何优化的创作工具</h2>
+    <p>
+        基于"Shape-Up: Shaping Discrete Geometry with Projections"和"Anderson Acceleration for Geometry Optimization and Physics Simulation"这两篇论文，用c++编写了一个创作工具，输入模型，执行操作，输出模型。操作包括planarization和ARAP deforamtion等。
+    </p>
+    <p>
+        我们制作了独立程序和Maya插件两个版本。
+    </p>
+    <p>
+        <a href="https://drive.google.com/file/d/1pLaFTvVHWPGburol8jJRtyzvEKDmvrgg/view?usp=sharing"> 独立程序视频</a>   
+    </p>
+    <p>
+        <a href="https://drive.google.com/file/d/19elzxffSRF5A9Qw9Ha57ZZX0cIkeezQo/view?usp=sharing"> presentation视频</a>    
+    </p>
+    <p> 
+        <a href="https://docs.google.com/presentation/d/1yPMS9ocDrQ96YBwME75GZV7nYWBDC5c2/edit?usp=sharing&ouid=110710600029969113633&rtpof=true&sd=true"> PPT</a>
+    </p>
+    <p><br/></p>
+
+    <h2>基于物理的渲染器</h2>
+    <p>
+        使用C++和Qt制作了一个基于物理的CPU渲染器。实现了Path Tracing算法，并且使用multiple importance sampling (MIS)来估计路径上每个顶点的贡献。
+    </p>
+    <p>
+        此程序首先加载一个json格式的场景文件，然后指定采样次数、深度限制和积分器进行渲染。在积分器的选项中，"Surface Normals"只是用来计算法线方向，"Full Lighting"是使用了Path tracing算法的积分器，"Direct Lighting"积分器只使用MIS计算直接光照，可以认为是深度限制固定为1的"Full Lighting"。
+    </p>
+    <p>
+        同时编写了一个使用相同算法的GPU渲染器。
+    </p>
+    <p>
+        以下是展示视频，分别是CPU渲染器和GPU渲染器，其中CPU渲染器剪掉了部分渲染过程。
+    </p>
+    <video height="600" controls>
+        <source src="./PBR.mp4" type="video/mp4">
+    </video>
+    <video height="600" controls>
+        <source src="./GPUPBR.mp4" type="video/mp4">
+    </video>
+    <p><br/></p>
+
+    <h2>Mini Minecraft</h2>
+    <p>使用Qt作为框架，使用OpenGL制作了一个简单的“我的世界（Minecraft)”游戏。玩家可以用飞行模式或地面模式自由移动，破坏方块或创造方块。地图随机生成，没有边界。下面的视频展示了我们所实现的所有功能。</p>
+    <iframe src="https://drive.google.com/file/d/1ka8l8ARFGWb50GoiU8JiabMgdnZb5vuF/preview" width="640" height="480" allow="autoplay"></iframe>
+    <p><br /></p>
+
+    <h2>Maya和Houdini的LSystem插件</h2>
+    <p>
+        制作了一个简单的Maya的LSystem插件和一个Houdini的LSystem插件。输入语法，迭代次数，角度和步长，就可以生成模型。
+    </p>
+    <video height="300" controls>
+        <source src="./maya.mp4" type="video/mp4">
+    </video>
+    <video height="300" controls>
+        <source src="./houdini.mp4" type="video/mp4">
+    </video>
+    <p><br/></p>
+
+    <h2>模型与骨骼编辑器</h2>
+    <p>使用Qt作为框架，制作了一个简易编辑器，用于加载并编辑网格模型与骨架，还实现了鼠标点击选择物体，加中点，三角化，模型细分，蒙皮等操作。</p>
+    <video height="400" controls>
+        <source src="./half-edge_mesh_editor_demo1.mp4" type="video/mp4">
+    </video>
+    <video height="400" controls>
+        <source src="./half-edge_mesh_editor_demo2.mp4" type="video/mp4">
+    </video>
+    <p><br/></p>
+
+    <h2>UE4小游戏</h2>
+    <p>
+        使用UE4引擎制作了两个小游戏
+    </p>
+    <iframe src="https://drive.google.com/file/d/170s1MsJf6DU7YrZEPKnJyTd8J5IClmyB/preview" width="640" height="480" allow="autoplay"></iframe>
+    <p>
+        这个游戏有点类似于“纪念碑谷”，利用了特定视角下的视觉错觉。你需要不断改变视角，发现新的“连通的”道路，并最终到达终点
+    </p>
+    <p><br/></p>
+    
+    <iframe width="1068" height="601" src="https://www.youtube.com/embed/-eCOsB2__f0" title="3dPinball" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>
+        这是一个VR游戏，可以视为3D版的三维弹球。你需要使用控制器击打球，防止其落到你身后，并使球撞到各种物体与机关，以获得分数。
+    </p>
+    <p><br/></p>
+
+    <h2>有趣的渲染效果</h2>
+    <p>使用OpenGL实现了一些有趣的渲染效果。</p>
+    <div style="float: left; margin-right: 3%;">
+        <p>顶点变换:</p>
+        <img src="./vertex_deformation.gif" height="480">
+    </div>
+    <div style="float: left;">
+        <p>后处理:</p>
+        <img src="./post_processing.gif" height="480">
+    </div>
+    <div style="clear: both;"></div>
+    <p><br/></p>
+    
+    <h2>顺向运动学（FK）与反向运动学（IK）</h2>
+    <p>实现了FK和一些IK方法，比如几何方法，CCD算法和矩阵伪逆算法。在人物的走路循环中应用了IK。</p>
+    <div style="float: left; margin-right: 3%;">
+        <video height="480" controls>
+            <source src="./fk_and_ik.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div style="float: left;">
+        <img src="./fook_ik.gif" height="300">
+    </div>
+    <div style="clear: both;"></div>
+    <p><br/></p>
+
+    <h2>固定的注视点渲染</h2>
+    <p>在Unity中通过丢弃并重建像素，实现了一种简单的固定注视点渲染的方法。</p>
+    <video height="480" controls>
+        <source src="./simple_forveated_rendering_demo.mp4" type="video/mp4">
+    </video>
 </div>
